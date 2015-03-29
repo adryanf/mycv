@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/siteless")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/fontawesome")
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <div class="sidebar-content">
+                <div class="navcontainer" style="display:inline-block;margin-right:10px;">
+                    <h1><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a></h1>
+                    <h1><i class="fa fa-linkedin-square"></i></h1>
+                    <h1><i class="fa fa-twitter-square"></i></h1>
+                </div>
+                <div style="display:inline-block">
+                    <h1 class="name-header">Adrian-Gabriel<br />Furculita </h1>
+                    @*<img class="img-responsive img-header" src="~/Content/Images/portrait.jpg" />*@
+
+                    <h3>Software developer <br /> @@Macadamian technologies</h3>
+                    <div class="nav-section">
+                        <h4><i class="fa fa-envelope"></i> adryan.gabryel@@rocketmail.com</h4>
+                        <h4><i class="fa fa-skype"></i> adryanfg</h4>
+                        <h4><i class="fa fa-phone"></i> +40742693503</h4>
+                    </div>
+
+                    <div class="nav-section">
+                        <h4 class="nav-header"><a class="section-anchor" href="#education">Education <i class="fa fa-book"></i></a></h4>
+
+                        <h4 class="nav-header"><a class="section-anchor" href="#experience">Experience <i class="fa fa-cogs"></i></a></h4>
+
+                        <h4 class="nav-header"><a class="section-anchor" href="#skills">Skills <i class="fa fa-code"></i></a></h4>
+
+                        <h4 class="nav-header"><a class="section-anchor" href="#projects">Projects <i class="fa fa-coffee"></i></a></h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        @RenderBody()
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>
