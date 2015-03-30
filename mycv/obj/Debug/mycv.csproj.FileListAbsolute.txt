@@ -62,3 +62,6 @@ F:\Work\mycv\mycv\bin\Newtonsoft.Json.xml
 F:\Work\mycv\mycv\obj\Debug\mycv.csprojResolveAssemblyReference.cache
 F:\Work\mycv\mycv\obj\Debug\mycv.dll
 F:\Work\mycv\mycv\obj\Debug\mycv.pdb
+F:\Work\mycv\mycv\bin\Content\Images\bypatriciu.JPG
+F:\Work\mycv\mycv\bin\Content\Images\carolplesa.JPG
+F:\Work\mycv\mycv\bin\Content\Images\nantec.JPG

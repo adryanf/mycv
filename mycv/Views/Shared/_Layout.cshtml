@@ -18,8 +18,8 @@
             <div class="sidebar-content">
                 <div class="navcontainer" style="display:inline-block;margin-right:10px;">
                     <h1><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a></h1>
-                    <h1><i class="fa fa-linkedin-square"></i></h1>
-                    <h1><i class="fa fa-twitter-square"></i></h1>
+                    <h1><a target="_blank" href="https://www.linkedin.com/pub/adrian-furculita/61/305/49b"><i class="fa fa-linkedin-square"></i></a></h1>
+                    <h1><a target="_blank" href="https://twitter.com/AdrianGabryel"><i class="fa fa-twitter-square"></i></a></h1>
                 </div>
                 <div style="display:inline-block">
                     <h1 class="name-header">Adrian-Gabriel<br />Furculita </h1>
@@ -60,6 +60,18 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+
+        $('.background-project').hover(
+    function () {
+
+        $(this).removeClass('blur');
+
+    }, function () {
+
+        $(this).addClass('blur');
+
+    }
+  );
     </script>
 </body>
 </html>
