@@ -61,17 +61,67 @@
             $("#wrapper").toggleClass("toggled");
         });
 
-        $('.background-project').hover(
-    function () {
+        function getInternetExplorerVersion()
+            // Returns the version of Internet Explorer or a -1
+            // (indicating the use of another browser).
+        {
+            var rv = -1; // Return value assumes failure.
+            if (navigator.appName == 'Microsoft Internet Explorer') {
+                var ua = navigator.userAgent;
+                var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+                if (re.exec(ua) != null)
+                    rv = parseFloat(RegExp.$1);
+            }
+            return rv;
+        }
 
-        $(this).removeClass('blur');
+        function checkIEVersion() {
+            var ver = getInternetExplorerVersion();
 
-    }, function () {
+            if (ver > -1) {
+                return true;
+            }
+            return false;
+        }
+        //Scroll effect
+        $('a.section-anchor').unbind('click').click(function (event) {
+            var $anchor = $(this);
 
-        $(this).addClass('blur');
+            if (checkIEVersion()) {
+                scrollToAreaIE($anchor.attr('href'), 800, -50);
+            }
+            else {
+                scrollToArea($anchor.attr('href'), 800, -50);
+            }
+            event.preventDefault();
+        });
 
-    }
-  );
+        function scrollToArea(areaId, time, verticalOffset) {
+            verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;
+            var offset = $(areaId).offset();
+            var offsetTop = offset.top + verticalOffset;
+
+            $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function () {
+                $('html, body').stop();
+            });
+
+
+            $('html, body').stop(true, true).animate({
+                scrollTop: offsetTop
+            }, time, 'easeInOutExpo', function () {
+                $("html, body").unbind("scroll mousedown DOMMouseScroll mousewheel keyup");
+            });
+        }
+
+        function scrollToAreaIE(areaId, time, verticalOffset) {
+            verticalOffset = typeof (verticalOffset) != 'undefined' ? verticalOffset : 0;
+            var offset = $(areaId).offset();
+            var offsetTop = offset.top + verticalOffset;
+
+            $('html, body').stop(true, true).animate({
+                scrollTop: offsetTop
+            }, time, 'easeInOutExpo');
+        }
     </script>
 </body>
 </html>
