@@ -16,30 +16,35 @@
         <div id="sidebar-wrapper">
 
             <div class="sidebar-content">
-                <div class="navcontainer" style="display:inline-block;margin-right:10px;">
+                <div class="navcontainer">
                     <h1><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a></h1>
+                    <h1><a target="_blank" href="https://github.com/adryanf"><i class="fa fa-github-square"></i></a></h1>
+                    <h1><a target="_blank" href="https://www.hackerrank.com/adryan_gabryel"><i class="fa fa-file-code-o"></i></a></h1>
                     <h1><a target="_blank" href="https://www.linkedin.com/pub/adrian-furculita/61/305/49b"><i class="fa fa-linkedin-square"></i></a></h1>
-                    <h1><a target="_blank" href="https://twitter.com/AdrianGabryel"><i class="fa fa-twitter-square"></i></a></h1>
+                    
                 </div>
-                <div style="display:inline-block">
-                    <h1 class="name-header">Adrian-Gabriel<br />Furculita </h1>
-                    @*<img class="img-responsive img-header" src="~/Content/Images/portrait.jpg" />*@
-
-                    <h3>Development Manager <br /> @@Macadamian technologies</h3>
+                <div class="side-nav-sum">
+                    <h1 class="name-header">Adrian-Gabriel Furculita </h1>
+                    <h3>Software Shaman @@Macadamian technologies</h3>
                     <div class="nav-section">
                         <h4><i class="fa fa-envelope"></i> adryan.gabryel@@rocketmail.com</h4>
                         <h4><i class="fa fa-skype"></i> adryanfg</h4>
                         <h4><i class="fa fa-phone"></i> +40742693503</h4>
+                        <div class="print-nav">
+                            <h4><a target="_blank" href="https://github.com/adryanf"><i class="fa fa-github-square"></i> Github</a></h4>
+                            <h4><a target="_blank" href="https://www.hackerrank.com/adryan_gabryel"><i class="fa fa-file-code-o"></i> HackerRank</a></h4>
+                            <h4><a target="_blank" href="https://www.linkedin.com/pub/adrian-furculita/61/305/49b"><i class="fa fa-linkedin-square"></i> Linkedin</a></h4>
+                        </div>
                     </div>
 
-                    <div class="nav-section">
+                    <div class="nav-section" id="site-nav">
+                        <h4 class="nav-header"><a class="section-anchor" href="#summary">Summary <i class="fa fa-check-square-o"></i></a></h4>
+
                         <h4 class="nav-header"><a class="section-anchor" href="#education">Education <i class="fa fa-book"></i></a></h4>
 
                         <h4 class="nav-header"><a class="section-anchor" href="#experience">Experience <i class="fa fa-cogs"></i></a></h4>
 
                         <h4 class="nav-header"><a class="section-anchor" href="#skills">Skills <i class="fa fa-code"></i></a></h4>
-
-                        <h4 class="nav-header"><a class="section-anchor" href="#projects">Projects <i class="fa fa-coffee"></i></a></h4>
                     </div>
                 </div>
 
@@ -88,10 +93,10 @@
             var $anchor = $(this);
 
             if (checkIEVersion()) {
-                scrollToAreaIE($anchor.attr('href'), 800, -50);
+                scrollToAreaIE($anchor.attr('href'), 800, 0);
             }
             else {
-                scrollToArea($anchor.attr('href'), 800, -50);
+                scrollToArea($anchor.attr('href'), 800, 0);
             }
             event.preventDefault();
         });

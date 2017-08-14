@@ -65,10 +65,6 @@ F:\Work\mycv\mycv\obj\Debug\mycv.pdb
 F:\Work\mycv\mycv\bin\Content\Images\bypatriciu.JPG
 F:\Work\mycv\mycv\bin\Content\Images\carolplesa.JPG
 F:\Work\mycv\mycv\bin\Content\Images\nantec.JPG
-D:\Work\Projects\mycv\mycv\bin\Content\Images\bypatriciu.JPG
-D:\Work\Projects\mycv\mycv\bin\Content\Images\carolplesa.JPG
-D:\Work\Projects\mycv\mycv\bin\Content\Images\nantec.JPG
-D:\Work\Projects\mycv\mycv\bin\Content\Images\portrait.JPG
 D:\Work\Projects\mycv\mycv\bin\mycv.dll.config
 D:\Work\Projects\mycv\mycv\bin\mycv.dll
 D:\Work\Projects\mycv\mycv\bin\mycv.pdb
