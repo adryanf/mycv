@@ -10,7 +10,6 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
     color: @base-font-color;
     background: @body-background;
-    overflow-x: hidden;
 }
 
 html, body {
@@ -55,7 +54,7 @@ h1 {
 
 #sidebar-wrapper {
     border-right: 1px solid @base-font-contrast-color;
-    overflow: hidden;
+    overflow-x: hidden;
     z-index: 1000;
     position: fixed;
     left: 300px;
@@ -167,6 +166,10 @@ h1 {
     }
 }
 
+@media(max-width:768px) {
+
+}
+
 .name-header {
     text-transform: uppercase;
     font-weight: 700;
@@ -177,22 +180,6 @@ h1 {
     max-width: 200px;
     margin: 0 auto;
 }
-
-/*#education {
-    background: #435a6b;
-}
-
-#experience {
-    background: #cd4436;
-}
-
-#skills {
-    background: #16a085;
-}
-
-#summary {
-    background: #3fa46a;
-}*/
 
 .section-anchor {
     top: 20px;
@@ -219,7 +206,7 @@ h1 {
 
 .section {
     padding-left: 10px;
-    padding-right: 10px;
+    margin-right: 40px;
     padding-bottom: 20px;
 }
 
@@ -271,11 +258,12 @@ h1 {
         z-index: 1000;
         position: relative;
         left: 0;
-        width: 100%;
+        width: 100% !important;
         height: 100%;
         margin-left: 0;
         overflow-y: auto;
         background: #111111;
+        border-right: none !important;
     }
 
     .sidebar-content {
